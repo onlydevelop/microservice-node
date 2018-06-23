@@ -1,3 +1,13 @@
+# Running
+
+```
+$ docker-compose up
+Starting 2-dockerisedmonolith_mongodb-test_1 ... done
+Starting 2-dockerisedmonolith_mongodb-dev_1  ... done
+...
+$ npm start
+...
+```
 # API Specification
 
 ## Clients
