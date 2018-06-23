@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  mongodb-dev:
+    image: 'bitnami/mongodb:3.6'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - "27017:27017"
+    volumes:
+      - 'mongodb_data_dev:/bitnami'
+
+  mongodb-test:
+    image: 'bitnami/mongodb:3.6'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - "27018:27017"
+    volumes:
+      - 'mongodb_data_test:/bitnami'
+
+volumes:
+  mongodb_data_dev:
+    driver: local
+  mongodb_data_test:
+    driver: local
