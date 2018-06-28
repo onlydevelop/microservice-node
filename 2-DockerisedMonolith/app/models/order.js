@@ -6,7 +6,8 @@ let OrderSchema = new Schema(
   {
     shipped: { type: Boolean, required: true },
     purchaseDate: { type: Date, default: Date.now },
-    orderId: { type: String, required: true }
+    orderId: { type: String, required: true },
+    clientId: { type: String, required: true }
   },
   {
     versionKey: false
