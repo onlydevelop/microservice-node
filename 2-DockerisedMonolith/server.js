@@ -103,6 +103,17 @@ router
   .put(item.updateItem)
   .delete(item.deleteItem)
 
+router
+  .route('/clients/:clientId/orders')
+  .get(order.getOrdersByClientId)
+  .post(order.postOrderByClientId)
+
+router
+  .route('/clients/:clientId/orders/:orderId')
+  .get(order.getOrderByClientId)
+  .put(order.updateOrderByClientId)
+  .delete(order.deleteOrderByClientId)
+
 app.use('/v1', router);
 app.listen(port);
 
